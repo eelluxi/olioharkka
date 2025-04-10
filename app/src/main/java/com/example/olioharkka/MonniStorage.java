@@ -18,4 +18,11 @@ public class MonniStorage {
     public ArrayList<Monni> getMonnit() {
         return monnit;
     }
+    public void addMonni (Monni monni) {
+        monnit.add(monni);
+    }
+    public void removeMonni(int index) {
+        monnit.remove(index);
+    }
+
 }
