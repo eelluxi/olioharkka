@@ -1,0 +1,13 @@
+21.4.2025 Muutoslokikirja luotu
+  Aktiviteetit:
+    Muutettu lista-aktiviteetti kotiaktiviteetiksi.
+    Lisätty taisteluaktiviteettipohja.
+    Lisätty treeniaktiviteettipohja.
+
+  Monit:
+    Monnien nimi muutettu moneiksi.
+    Lisätty ja muutettu monityypit.
+    Lisätty hyökkäys, puolustus ja kokemustoiminnot moneille.
+
+  Muuta:
+    Lisätty suunnitelma.txt
