@@ -1,6 +1,6 @@
 package com.example.olioharkka;
 
-public class Moni {
+public abstract class Lutemon { // abstract base class for all lutemons
 
     protected int ID;
     protected int hpmax; // max health points
@@ -11,42 +11,55 @@ public class Moni {
 
     protected int xpmax; //max experience points
     protected int lvl; //level
+    protected int image;
     protected String name;
     protected String color;
+    public static int counter = 0;
+
+    protected boolean shiny = false;
 
 
-    public Moni(String name, int ID, int lvl) {
-        // Saa parametreina nimen, ID:n ja lvl:n. Väri valitaan satunnaisesti taistelukohtaamisessa.
+    public Lutemon(String name, int lvl) { // Gets name and lvl as parameters. Color is decided beforehand and dictates stats.
+        counter++;
+        this.ID = counter;
+
         this.name = name;
-        this.ID = ID; // MoniStorage.getInstance().getMonnit().size() + 1
+
+        //this.ID = ID; // MoniStorage.getInstance().getLutemons().size() + 1
+
         this.lvl = lvl;
 
+        /* Tämä turhaa
         // Värittömän (yleinen) monin constructori. Alustetaan arvot varmuuden vuoksi nollaksi.
         this.hpmax = 0;
         this.hp = 0;
         this.ap = 0;
         this.dp = 0;
         this.xp = 0;
+        this.color = "Colorless";
+        */
 
         this.xpmax = 100 + (lvl * 10);
-        this.color = "Colorless";
 
+        if ((int)(Math.random()*100) <= 5) { // 5% chance for a lutemon to be shiny. Purely visual
+            shiny = true;
+        }
 
     }
 
-    public void defend(Moni moni){
-        this.hp = this.hp - (moni.attack() - dp);
-        this.xp = xp + dp;  //puolustuksesta saa xp-arvoa
-        levelup(); // tarkistetaan, riittääkö uusi xp-arvo tason nousemiseen
+    public void defend(Lutemon lutemon){
+        this.hp = this.hp - (lutemon.attack() - dp);
+        this.xp = xp + dp;  // defending gives xp-points
+        levelup(); // checking if levelup is needed
     }
 
     public int attack(){
-        int hit =(ap + (int)(Math.random() * (ap / 2))); //Lisätään pieni satunnaisuus hyökkäykseen
-        this.xp = this.xp + ap; // hyökkäyksestä saa xp-arvoa
-        levelup(); // tarkistetaan, riittääkö uusi xp-arvo tason nousemiseen
+        int hit =(ap + (int)(Math.random() * (ap / 2))); // Adds a small random modifier to attack
+        this.xp = this.xp + ap; // attacking gives xp-points
+        levelup(); // checking if levelup is needed
         return hit;
     }
-    public boolean isalive(){ // tarkistetaan onko elossa
+    public boolean isalive(){ // false if dead, true if alive.
         if (hp <= 0) {
             return false;
         }
@@ -58,7 +71,7 @@ public class Moni {
     }
 
     public void levelup(){
-        if (xp >= xpmax) { // verrataan nykyistä xp-arvoa ja maksimiarvoa tason nousemista varten
+        if (xp >= xpmax) {
             xp = xp - xpmax;
             xpmax = xpmax + 10;
             lvl = lvl + 1;

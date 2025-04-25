@@ -7,4 +7,47 @@
     android:layout_height="match_parent"
     tools:context=".NewGameActivity">
 
+    <ImageView
+        android:id="@+id/orangeChoice"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/pinkChoice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/lutemonorange" />
+
+    <ImageView
+        android:id="@+id/greenChoice"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pinkChoice"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.50"
+        app:srcCompat="@drawable/lutemongreen" />
+
+    <ImageView
+        android:id="@+id/pinkChoice"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/greenChoice"
+        app:layout_constraintStart_toEndOf="@+id/orangeChoice"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/lutemonpink" />
+
+    <TextView
+        android:id="@+id/NewGameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valitse ensimmäinen\nLutemonisi"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/pinkChoice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,12 +6,12 @@ Pelin idea:
     joiden lvl-arvo on +-1 pelaajan aktiivisen monnin tasosta ja tyyppi on satunnainen.
 
     Kun villin monin hp-arvo on alle 20% maksimiarvosta, pelaaja voi ottaa kyseisen monin itselleen.
-    Jos kummankaan monin hp-arvo on alle 0, kyseinen moni pyörtyy ja pelaaja palaa kotiin.
+    Jos kummankaan monin hp-arvo on alle 0, kyseinen lutemon pyörtyy ja pelaaja palaa kotiin.
     Pelaajan kotona voi olla tallessa maksimissan 10 monia, joita pystyy ottamaan aktiiviseksi
     taistelukumppaniksi tai palauttaa luontoon.
 
     Monit hyökkäävät käyttämällä omaa ap-arvoa (attack point) jonka lisäksi lisätään satunnainen ap-
-    arvosta muodostettu lisä-arvo, jota vastustava moni puolustautuu käyttämällä dp-arvoaan.
+    arvosta muodostettu lisä-arvo, jota vastustava lutemon puolustautuu käyttämällä dp-arvoaan.
 
     Monit keräävät xp-arvoa (experience point) sekä taistelun aikana, että taistelun päätyttyä, jonka
     saavuttaessa tietyn arvon (alustavasti 100) kyseisen monin lvl-, maxhp-, ap- ja dp- arvot nousevat
