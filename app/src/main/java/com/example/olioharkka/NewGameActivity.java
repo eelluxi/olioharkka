@@ -30,22 +30,29 @@ public class NewGameActivity extends AppCompatActivity {
 
         orangeChoice.setOnClickListener(v -> {
             LutemonStorage.getInstance().addLutemon(new LutemonOrange("Ossi Oranssi",1));
-            Intent intent = new Intent(NewGameActivity.this, BattleActivity.class);
+            Intent intent = new Intent(NewGameActivity.this, HomeActivity.class);
             startActivity(intent);
+            this.finish();
         });
 
         pinkChoice.setOnClickListener(v -> {
             LutemonStorage.getInstance().addLutemon(new LutemonPink("Pietu Pinkki",1));
-            Intent intent = new Intent(NewGameActivity.this, BattleActivity.class);
+            Intent intent = new Intent(NewGameActivity.this, HomeActivity.class);
             startActivity(intent);
+            this.finish();
         });
 
         greenChoice.setOnClickListener(v -> {
             LutemonStorage.getInstance().addLutemon(new LutemonGreen("Ville Vihreä",1));
-            Intent intent = new Intent(NewGameActivity.this, BattleActivity.class);
+            Intent intent = new Intent(NewGameActivity.this, HomeActivity.class);
             startActivity(intent);
+            this.finish();
         });
 
+
+        }
+
+        public void choseOrange(Lutemon lutemon){
 
         }
 

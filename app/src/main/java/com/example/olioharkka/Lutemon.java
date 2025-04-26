@@ -12,6 +12,7 @@ public abstract class Lutemon { // abstract base class for all lutemons
     protected int xpmax; //max experience points
     protected int lvl; //level
     protected int image;
+    protected int shinySeed;
     protected String name;
     protected String color;
     public static int counter = 0;
@@ -22,6 +23,7 @@ public abstract class Lutemon { // abstract base class for all lutemons
     public Lutemon(String name, int lvl) { // Gets name and lvl as parameters. Color is decided beforehand and dictates stats.
         counter++;
         this.ID = counter;
+        System.out.println("Uuden Lutemonin ID on: "+ID);
 
         this.name = name;
 
@@ -39,10 +41,14 @@ public abstract class Lutemon { // abstract base class for all lutemons
         this.color = "Colorless";
         */
 
+        this.shinySeed = (int)(Math.random()*100);
         this.xpmax = 100 + (lvl * 10);
-
-        if ((int)(Math.random()*100) <= 5) { // 5% chance for a lutemon to be shiny. Purely visual
+        System.out.println("Shinyseed on "+shinySeed+", tarkistetaan onka alle 5.");
+        if (shinySeed <= 5) { // 5% chance for a lutemon to be shiny. Purely visual
             shiny = true;
+            System.out.println("on");
+        } else {
+            System.out.println("ei");
         }
 
     }
@@ -82,4 +88,45 @@ public abstract class Lutemon { // abstract base class for all lutemons
         }
     }
 
+    public int getID() {
+        System.out.print("ID: " + ID);
+        return ID;
     }
+
+    public int getHpmax() {
+        return hpmax;
+    }
+
+    public int getHp() {
+        return hp;
+    }
+
+    public int getAp() {
+        return ap;
+    }
+
+    public int getDp() {
+        return dp;
+    }
+
+    public int getLvl() {
+        return lvl;
+    }
+
+    public int getImage() {
+        return image;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void refreshHp(){
+        hp = hpmax;
+    }
+
+}

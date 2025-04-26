@@ -24,5 +24,8 @@ public class LutemonStorage {
     public void removeLutemon(int index) {
         lutemons.remove(index);
     }
+    public Lutemon getLutemon(int index) {
+        return lutemons.get(index);
+    }
 
 }
