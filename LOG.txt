@@ -1,3 +1,31 @@
+26.4.2025 Version 0.3
+  Activities:
+    New Game:
+      The choice of first lutemon actually works and switches to Home activity // TODO: Naming prompt
+    Home:
+      Now has an active lutemon. By default is the oldest lutemon in storage
+      Added recyclerview to show all available lutemons in storage
+      Added information box for currently active lutemon
+      Added a button to switch to Battle activity
+      Added buttons to switch active lutemons and delete lutemons from the storage // TODO: Rename button
+    Battle:
+      Added a template for the UI //TODO: Set correct information for enemy encounters
+      Added buttons to escape, attack or capture enemy lutemons //TODO: Add functionality
+      Added a recyclerview to show battlelog for the encounter //TODO: Finish BattleLogHolder and BattleLogAdapter
+
+  Lutemons:
+    Lutemon:
+      Added setName and refresHP methods
+      Added int shinySeed as a seperate variable to debug shiny generation process
+    LutemonStorage:
+      Added getLutemon method
+
+  Resources:
+    Layout:
+      added battlelog_view
+      renamed monnivew to lutemon_view
+
+
 25.4.2025 Version 0.2
   Activities:
     Main:
