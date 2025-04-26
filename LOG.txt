@@ -1,3 +1,38 @@
+25.4.2025 Version 0.2
+  Activities:
+    Main:
+      Added function to New Game button
+    New Game:
+      Added the choice of first lutemon
+      TODO: Finish naming prompt popup
+
+  Lutemons (formerly moni):
+    Lutemon:
+      Made abstract
+      Disabled base stat constructor
+      Added a shiny roll to constructor
+      Added a counter that gives the lutemon it's unique ID
+    Black:
+      Added sprites for base and shiny variants
+    Green:
+      Added sprites for base and shiny variants
+    Orange:
+      Added sprites for base and shiny variants
+    Pink:
+      Added sprites for base and shiny variants
+    White:
+      Added sprites for base and shiny variants
+    Red (a new variant):
+      Added constructor and base stats
+      Added sprites for base and shiny variants
+
+  Resources:
+    drawable:
+      Added sprites for base and shiny variants for all Lutemon variants
+    layout:
+      Added a popup box for naming the players first lutemon. Not working
+      
+
 21.4.2025 Muutoslokikirja luotu
   Aktiviteetit:
     Muutettu lista-aktiviteetti kotiaktiviteetiksi.
