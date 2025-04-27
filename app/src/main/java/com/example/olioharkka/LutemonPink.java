@@ -8,7 +8,7 @@ public class LutemonPink extends Lutemon {
         this.ap = 7 + lvl;
         this.dp = 2 + lvl;
         this.xp = 0;
-        this.color = "Pinkki";
+        this.color = "pinkki";
 
         if (shiny == true) {
             this.image = R.drawable.lutemonpinkshiny;

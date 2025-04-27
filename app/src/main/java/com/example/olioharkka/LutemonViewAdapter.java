@@ -30,7 +30,7 @@ public class LutemonViewAdapter  extends RecyclerView.Adapter<LutemonViewHolder>
     @Override
     public void onBindViewHolder(@NonNull LutemonViewHolder holder, int position) {
         holder.nameText.setText(lutemons.get(position).getName());
-        holder.hpText.setText("HP: " +Integer.toString(lutemons.get(position).getHpmax()) + "/" + Integer.toString(lutemons.get(position).getHp()));
+        holder.hpText.setText("HP: " +Integer.toString(lutemons.get(position).getHp()) + "/" + Integer.toString(lutemons.get(position).getHpmax()));
         holder.lvlText.setText("LVL: "+Integer.toString(lutemons.get(position).getLvl()));
         holder.statText.setText("AP/DP: "+Integer.toString(lutemons.get(position).getAp()) + "/" + Integer.toString(lutemons.get(position).getDp()));
         holder.lutemonImage.setImageResource(lutemons.get(position).getImage());
@@ -49,6 +49,7 @@ public class LutemonViewAdapter  extends RecyclerView.Adapter<LutemonViewHolder>
             }
         });
          */
+
         holder.chooseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

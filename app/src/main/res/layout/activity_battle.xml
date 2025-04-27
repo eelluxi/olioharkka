@@ -8,6 +8,7 @@
     tools:context=".BattleActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -159,36 +160,49 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/escapeButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Karkaa"
+        android:backgroundTint="#2196F3"
+        android:onClick="escape"
+        android:text="Takaisin"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/attackButton"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/attackButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:backgroundTint="#2196F3"
+        android:onClick="battle"
         android:text="Hyökkää!"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
-        app:layout_constraintStart_toEndOf="@+id/button" />
+        app:layout_constraintEnd_toStartOf="@+id/captureButton"
+        app:layout_constraintStart_toEndOf="@+id/escapeButton" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/captureButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:backgroundTint="#2196F3"
+        android:onClick="capture"
         android:text="Vangitse"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button2" />
+        app:layout_constraintStart_toEndOf="@+id/attackButton" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/LogBox"
         android:layout_width="409dp"
         android:layout_height="347dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="168dp" />
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/escapeButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

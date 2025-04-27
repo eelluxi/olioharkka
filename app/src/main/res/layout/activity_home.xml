@@ -7,13 +7,26 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
+    <TextView
+        android:id="@+id/activeTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aktiivinen Lutemon"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <LinearLayout
         android:id="@+id/activeLutemon"
         android:layout_width="0dp"
         android:layout_height="140dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activeTitle">
 
         <ImageView
             android:id="@+id/LutemonImage"
@@ -30,13 +43,36 @@
             android:backgroundTint="#91EBF6"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/nameText"
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Vallu Valkoinen"
-                android:textSize="24sp"
-                android:textStyle="bold" />
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/nameText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:text="Vallu Valkoinen"
+                    android:textSize="24dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/editButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#6A919090"
+                    android:paddingLeft="6dp"
+                    android:paddingTop="0dp"
+                    android:paddingRight="6dp"
+                    android:paddingBottom="0dp"
+                    android:text="Muokkaa"
+                    android:textColor="@color/white"
+                    app:cornerRadius="12dp" />
+
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/hpText"
@@ -68,14 +104,32 @@
 
     <Button
         android:id="@+id/switchToBattle"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:backgroundTint="#2196F3"
+        android:onClick="switchToBattle"
         android:text="Taisteluun!"
+        android:textColor="@color/white"
         android:textSize="20sp"
+        app:cornerRadius="12dp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activeLutemon" />
+
+    <Button
+        android:id="@+id/restButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#2196F3"
+        android:onClick="restLutemons"
+        android:text="Lepää"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:cornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/activeLutemon" />
 
     <androidx.recyclerview.widget.RecyclerView

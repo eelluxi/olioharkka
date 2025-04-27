@@ -8,7 +8,7 @@ public class LutemonRed extends Lutemon {
         this.ap = 11 + lvl;
         this.dp = 1 + lvl;
         this.xp = 0;
-        this.color = "Punainen";
+        this.color = "punainen";
 
         if (shiny == true){ // Super harvinainen shiny punainen lutemon
             this.image = R.drawable.lutemonredshiny;

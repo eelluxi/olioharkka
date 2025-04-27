@@ -20,12 +20,17 @@ public class LutemonStorage {
     }
     public void addLutemon(Lutemon lutemon) {
         lutemons.add(lutemon);
+        LogStorage.getInstance().addText("Lutemon " + lutemon.getName() + " lisätty!");
     }
     public void removeLutemon(int index) {
         lutemons.remove(index);
     }
     public Lutemon getLutemon(int index) {
         return lutemons.get(index);
+    }
+
+    public void clearLutemons() {
+        lutemons.clear();
     }
 
 }

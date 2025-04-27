@@ -1,3 +1,37 @@
+27.4.2025 DEADLINE Version 0.4 PLAYABLE
+    Activities:
+        Main:
+            Added a button to view credits
+        Home:
+            Now has a button to rest all lutemons refreshing their hp.
+            Storage now has maximum of 10 lutemons
+            Added a button to edit active lutemon name
+            fixed hp text showing hpmax/hp instead of hp/hpmax
+        Battle:
+            All Buttons now have functionality
+            Generates a random lutemon as an opponent
+            Has a battlelog recycleview showing events of the battle
+            Player can now capture weakened lutemons
+        Credits (new!):
+            Shows credits for the game
+    Lutemons:
+        Lutemon:
+            Cleaned up various methods
+            Added and modified a few getters and setters
+            Attacking and defending no longer level up lutemon, but still gives xp
+    Resources:
+        Layouts:
+            name_lutemon_prompt.xml now works properly
+    Other:
+        Battlelog:
+            Now has an adapter and holder
+            Gets a list of events from LogStorage
+        LogStorage:
+            A singleton that collects events in battle activity as strings
+        Documentation (new!)
+            Transferred LOG.txt and suunnitelma.txt to documentation folder
+            added
+
 26.4.2025 Version 0.3
   Activities:
     New Game:

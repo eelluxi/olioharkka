@@ -24,38 +24,35 @@ public class NewGameActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
         orangeChoice = findViewById(R.id.orangeChoice);
         greenChoice = findViewById(R.id.greenChoice);
         pinkChoice = findViewById(R.id.pinkChoice);
 
-        orangeChoice.setOnClickListener(v -> {
+        LutemonStorage.getInstance().clearLutemons(); // Clears the lutemon storage for a new game
+
+        orangeChoice.setOnClickListener(v -> { // Orange lutemon is chosen
             LutemonStorage.getInstance().addLutemon(new LutemonOrange("Ossi Oranssi",1));
             Intent intent = new Intent(NewGameActivity.this, HomeActivity.class);
             startActivity(intent);
+            HomeActivity.setActiveLutemon(LutemonStorage.getInstance().getLutemon(0));
             this.finish();
         });
 
-        pinkChoice.setOnClickListener(v -> {
+        pinkChoice.setOnClickListener(v -> { // Pink lutemon is chosen
             LutemonStorage.getInstance().addLutemon(new LutemonPink("Pietu Pinkki",1));
             Intent intent = new Intent(NewGameActivity.this, HomeActivity.class);
             startActivity(intent);
+            HomeActivity.setActiveLutemon(LutemonStorage.getInstance().getLutemon(0));
             this.finish();
         });
 
-        greenChoice.setOnClickListener(v -> {
+        greenChoice.setOnClickListener(v -> { // Green lutemon is chosen
             LutemonStorage.getInstance().addLutemon(new LutemonGreen("Ville Vihreä",1));
             Intent intent = new Intent(NewGameActivity.this, HomeActivity.class);
             startActivity(intent);
+            HomeActivity.setActiveLutemon(LutemonStorage.getInstance().getLutemon(0));
             this.finish();
         });
-
-
         }
-
-        public void choseOrange(Lutemon lutemon){
-
-        }
-
-
-
 }

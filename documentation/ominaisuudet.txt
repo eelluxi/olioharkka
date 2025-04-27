@@ -1,0 +1,37 @@
+Pelin ominaisuudet vastaavat pääosin alussa tehdyn suunnitelmaa:
+    Peli generoi "lutemoneja", jotka pystyvät taistelemaan keskenään.
+
+    Pelin alussa pelaaja valitsee itselleen joko Vihreän, Pinkin tai Oranssin lutemonin. Tämä lutemon
+    on ensisijaisesti pelaajan "aktiivinen" lutemon.
+
+    Aktiivisella lutemonilla on seuraavat ominaisuudet:
+        Voi nimetä uudelleen
+        Lähtee mukaan taistelukentälle
+
+    Pelaajan mennessä taistelukentälle, pelaaja kohtaa muita "villejä" lutemoneja, joiden
+    lvl-arvo on +-1 pelaajan aktiivisen lutemonin tasosta (kun pelaajan lutemonin taso on yli 1)
+    ja tyyppi on satunnainen.
+
+    Todennäköisyydet tyypille(värille) ovat:
+        Oranssi     25%
+        Pinkki      25%
+        Vihreä      25%
+        Musta       10%
+        Valkoinen   10%
+        Punainen    5%
+
+    Lisäksi jokaisella generoidulla lutemonilla on 5% mahdollisuus olla "shiny" eli visuaalisesti
+    eriävä variantti.
+
+    Kun villin lutemonin hp-arvo on alle 20% maksimiarvosta, pelaaja voi ottaa kyseisen monin itselleen.
+    Jos kummankaan monin hp-arvo on alle 0, kyseinen lutemon pyörtyy.
+
+    Pelaajan kotona voi olla tallessa maksimissan 10 lutemonia, joita pystyy ottamaan aktiiviseksi
+    lutemoniksi tai palauttaa luontoon.
+
+    Lutemonit hyökkäävät käyttämällä omaa ap-arvoa (attack point) jonka lisäksi lisätään satunnainen ap-
+    arvosta muodostettu lisä-arvo, jota vastustava lutemon puolustautuu käyttämällä dp-arvoaan.
+
+    Lutemonit keräävät xp-arvoa (experience point) sekä taistelun aikana, että taistelun päätyttyä, jonka
+    saavuttaessa tietyn arvon (alustavasti 100) kyseisen monin lvl-, maxhp-, ap- ja dp- arvot nousevat
+    yhdellä ja max-xp-arvo kymmenellä.

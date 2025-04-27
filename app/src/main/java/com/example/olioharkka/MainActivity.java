@@ -27,6 +27,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, NewGameActivity.class);
         startActivity(intent);
     }
+    public void switchToCredit(View view){
+        Intent intent = new Intent(this, CreditActivity.class);
+        startActivity(intent);
+    }
 
 }
 

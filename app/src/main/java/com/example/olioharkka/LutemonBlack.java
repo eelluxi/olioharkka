@@ -8,7 +8,7 @@ public class LutemonBlack extends Lutemon {
         this.ap = 9 + lvl;
         this.dp = 0 + lvl;
         this.xp = 0;
-        this.color = "Musta";
+        this.color = "musta";
 
         if (shiny == true){
             this.image = R.drawable.lutemonblackshiny;

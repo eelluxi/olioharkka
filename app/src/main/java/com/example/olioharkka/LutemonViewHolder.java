@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class LutemonViewHolder extends RecyclerView.ViewHolder {
-    TextView chooseText, releaseText;
+    //TextView chooseText, releaseText;
     TextView nameText, lvlText, statText, hpText;
     ImageView lutemonImage;
     Button chooseButton, releaseButton;

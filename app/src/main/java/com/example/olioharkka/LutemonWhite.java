@@ -10,7 +10,7 @@ public class LutemonWhite extends Lutemon {
         this.ap = 5 + lvl;
         this.dp = 4 + lvl;
         this.xp = 0;
-        this.color = "Valkoinen";
+        this.color = "valkoinen";
 
         if (shiny == true){
             this.image = R.drawable.lutemonwhiteshiny;

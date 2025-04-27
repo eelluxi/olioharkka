@@ -1,5 +1,7 @@
 package com.example.olioharkka;
 
+import android.util.Log;
+
 public abstract class Lutemon { // abstract base class for all lutemons
 
     protected int ID;
@@ -23,49 +25,28 @@ public abstract class Lutemon { // abstract base class for all lutemons
     public Lutemon(String name, int lvl) { // Gets name and lvl as parameters. Color is decided beforehand and dictates stats.
         counter++;
         this.ID = counter;
-        System.out.println("Uuden Lutemonin ID on: "+ID);
-
         this.name = name;
-
-        //this.ID = ID; // MoniStorage.getInstance().getLutemons().size() + 1
-
         this.lvl = lvl;
-
-        /* Tämä turhaa
-        // Värittömän (yleinen) monin constructori. Alustetaan arvot varmuuden vuoksi nollaksi.
-        this.hpmax = 0;
-        this.hp = 0;
-        this.ap = 0;
-        this.dp = 0;
-        this.xp = 0;
-        this.color = "Colorless";
-        */
-
         this.shinySeed = (int)(Math.random()*100);
         this.xpmax = 100 + (lvl * 10);
-        System.out.println("Shinyseed on "+shinySeed+", tarkistetaan onka alle 5.");
         if (shinySeed <= 5) { // 5% chance for a lutemon to be shiny. Purely visual
             shiny = true;
-            System.out.println("on");
-        } else {
-            System.out.println("ei");
         }
 
     }
 
-    public void defend(Lutemon lutemon){
-        this.hp = this.hp - (lutemon.attack() - dp);
+    public void defend(int dmg){
+        this.hp = this.hp - (dmg - dp);
+
         this.xp = xp + dp;  // defending gives xp-points
-        levelup(); // checking if levelup is needed
     }
 
     public int attack(){
         int hit =(ap + (int)(Math.random() * (ap / 2))); // Adds a small random modifier to attack
         this.xp = this.xp + ap; // attacking gives xp-points
-        levelup(); // checking if levelup is needed
         return hit;
     }
-    public boolean isalive(){ // false if dead, true if alive.
+    public boolean isAlive(){ // false if dead, true if alive.
         if (hp <= 0) {
             return false;
         }
@@ -73,6 +54,7 @@ public abstract class Lutemon { // abstract base class for all lutemons
     }
     public void gainxp(int xp){
         this.xp = this.xp + xp;
+        LogStorage.getInstance().addText("Oma lutemon "+name+" sai "+xp+" xp-pisteitä!");
         levelup();
     }
 
@@ -85,14 +67,13 @@ public abstract class Lutemon { // abstract base class for all lutemons
             hp = hp + 1;
             ap = ap + 1;
             dp = dp + 1;
+            LogStorage.getInstance().addText("Oma lutemon "+name+" on nyt lvl "+lvl+"!");
         }
     }
 
     public int getID() {
-        System.out.print("ID: " + ID);
         return ID;
     }
-
     public int getHpmax() {
         return hpmax;
     }
@@ -125,8 +106,16 @@ public abstract class Lutemon { // abstract base class for all lutemons
         this.name = name;
     }
 
+    public String getColor() {
+        return color;
+    }
+
     public void refreshHp(){
         hp = hpmax;
+    }
+
+    public boolean isShiny() {
+        return shiny;
     }
 
 }

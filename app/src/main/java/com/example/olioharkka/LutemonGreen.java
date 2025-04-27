@@ -8,7 +8,7 @@ public class LutemonGreen extends Lutemon {
         this.ap = 6 + lvl;
         this.dp = 3 + lvl;
         this.xp = 0;
-        this.color = "Vihreä";
+        this.color = "vihreä";
 
         if (shiny == true){
             this.image = R.drawable.lutemongreenshiny;

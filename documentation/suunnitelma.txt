@@ -1,0 +1,38 @@
+Pelin idea:
+
+    Peli generoi "lutemoneja", jotka pystyvät taistelemaan keskenään.
+    Pelin alussa pelaaja valitsee itselleen joko Vihreän, Pinkin tai Oranssin lutemonin.
+    Pelaaja pystyy menemään taistelualueelle, jossa kohtaa muita lutemoneja,
+    joiden lvl-arvo on +-1 pelaajan aktiivisen lutemonin tasosta ja tyyppi on satunnainen.
+
+    Todennäköisyydet ovat:
+        Oranssi     25%
+        Pinkki      25%
+        Vihreä      25%
+        Musta       10%
+        Valkoinen   10%
+        Punainen    5%
+
+    Lisäksi jokaisella generoidulla lutemonilla on 5% mahdollisuus olla "shiny" eli visuaalisesti
+    eriävä variantti.
+
+    Kun villin lutemonin hp-arvo on alle 20% maksimiarvosta, pelaaja voi ottaa kyseisen monin itselleen.
+    Jos kummankaan monin hp-arvo on alle 0, kyseinen lutemon pyörtyy ja pelaaja palaa kotiin.
+    Pelaajan kotona voi olla tallessa maksimissan 10 monia, joita pystyy ottamaan aktiiviseksi
+    taistelukumppaniksi tai palauttaa luontoon.
+
+    Lutemonit hyökkäävät käyttämällä omaa ap-arvoa (attack point) jonka lisäksi lisätään satunnainen ap-
+    arvosta muodostettu lisä-arvo, jota vastustava lutemon puolustautuu käyttämällä dp-arvoaan.
+
+    Lutemonit keräävät xp-arvoa (experience point) sekä taistelun aikana, että taistelun päätyttyä, jonka
+    saavuttaessa tietyn arvon (alustavasti 100) kyseisen monin lvl-, maxhp-, ap- ja dp- arvot nousevat
+    yhdellä ja max-xp-arvo kymmenellä.
+
+    Jos kehitysaika riittää ennen deadlinea 27.4.2025, peliin lisätään ominaisuus tallentaa ja ladata
+    tallennustiedosto edistyksen säilyttämiseksi.
+
+    Peliä tullaan mahdollisesti jatkokehittämään kurssin jälkeen harrastusmielessä.
+
+
+
+

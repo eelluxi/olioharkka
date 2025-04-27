@@ -1,0 +1,19 @@
+Vaatimus                                                            Pisteet
+
+Yleiset vaatimukset:
+    Oliokoodia                                                      Pakollinen
+    Koodi on englanniksi                                            Pakollinen
+    Ohjelma toimii Androidilla                                      Pakollinen
+    Dokumentaatio                                                   Pakollinen
+
+Listatut mahdolliset ominaisuudet:
+    Ohjelma sisältää perustoiminnallisuuden                         Pakollinen
+    RecycleView                                                     3
+    Lutemoneilla on kuva                                            1
+    Taistelu on visualisioitu                                       4
+    Satunnaisuus(hyökkäyksessä)                                     1
+
+Omat ehdotukset:
+    Popup ikkunan käyttö                                            1
+    Mahdollisuus lisätä, poistaa, ja vaihtaa aktiivinen lutemon     1
+    Taistelukohtaaminen on satunnainesti luotu                      2

@@ -2,9 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="300dp"
-    android:background="#9C00BCD4">
+    android:background="@color/white">
 
     <TextView
         android:id="@+id/PromptText"
@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:shadowColor="@color/white"
-        android:text="Anna lutemonille nimi:"
+        android:text="Nimeä Lutemon"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="24sp"
@@ -25,7 +25,10 @@
         android:id="@+id/NamePrompt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="40dp"
+        android:layout_marginRight="8dp"
+        android:editable="true"
         android:ems="10"
         android:inputType="text"
         android:textColor="@color/black"
@@ -42,6 +45,7 @@
         android:layout_marginTop="40dp"
         android:backgroundTint="#2196F3"
         android:text="Valmis"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/NamePrompt" />
