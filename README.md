@@ -11,4 +11,4 @@ IN FINNISH:
 	joka on jälkeenpäin muokattu, tarkastettu ja analysoitu.
   
 Tehtävänannossa vaadittu tarkempi dokumentaatio (muutosloki, luokkakaavio, suunnitelma, kuvaus ominaisuuksista ja halutut pisteet) löytyvät kansiosta "documentation"
-  
+Työn on tehnyt Elias Karjalainen
